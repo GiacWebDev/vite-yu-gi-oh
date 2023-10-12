@@ -30,6 +30,10 @@ export default {
           console.log(err);
         })
     }
+  },
+  
+  mounted(){
+    this.getApi();
   }
 }
 
