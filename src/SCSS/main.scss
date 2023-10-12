@@ -1,0 +1,12 @@
+@use './partials/variables' as *;
+
+// importo bootstrap
+@import 'bootstrap/scss/bootstrap';
+//importo il fdont dopo averlo installato con npm e messo nei _variables come font principale
+@import '@fontsource/roboto';
+
+
+
+body {
+  font-family: $main-font;
+}

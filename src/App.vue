@@ -1,13 +1,20 @@
 <script>
+
+import Header from './components/Header.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Header,
+  }
 }
+
 </script>
 
 
 <template>
 
-  <h1>App-Yu-Gi-Oh</h1>
+  <Header />
   
 </template>
 
