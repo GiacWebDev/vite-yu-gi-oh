@@ -19,7 +19,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@use '../assets/SCSS/partials/main.scss' as *;
+@use '../assets/SCSS/main.scss' as *;
 
 img {
   width: 100px;
