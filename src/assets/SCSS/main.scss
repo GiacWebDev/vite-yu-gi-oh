@@ -15,8 +15,13 @@ main {
   background-color: $primary-color;
   width: 100%;
   min-height: 100vh;
+  padding-top: 50px;
 }
 
 .debug {
   border: 1px solid black;
+}
+
+.container {
+  background-color: white;
 }

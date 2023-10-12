@@ -5,7 +5,6 @@ export default {
 </script>
 
 
-
 <template>
 
   <header>  
@@ -18,13 +17,9 @@ export default {
 </template>
 
 
-
 <style lang="scss" scoped>
 @use '../assets/SCSS/main.scss' as *;
 
-header {
-  background-color: white;
-}
 
 img {
   width: 100px;

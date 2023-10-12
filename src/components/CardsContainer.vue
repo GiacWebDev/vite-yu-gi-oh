@@ -1,24 +1,31 @@
 <script>
-
+import { store } from '../Data/store';
 import CharacterCard from './partials/CharacterCard.vue';
 
 export default {
   name: 'CardsContainer',
   components: {
     CharacterCard
-  }
+  },
+  data() {
+    return {
+      store
+    }
+  },
 }
 </script>
+
 
 
 
 <template>
 
   <main>
-  <div class="container">
+    <div class="container">
       <div class="row">
 
         <CharacterCard />
+
         
       </div>
     </div>
@@ -30,13 +37,5 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/SCSS/main.scss' as *;
-
-main {
-  padding-top: 50px;
-}
-.container {
-  background-color: white;
-}
-
 
 </style>
