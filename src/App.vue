@@ -1,4 +1,6 @@
 <script>
+import { store } from './Data/store';
+import axios from 'axios';
 import CardsContainer from './components/CardsContainer.vue';
 import Header from './components/Header.vue';
 // import { store } from 'vue'
@@ -10,11 +12,25 @@ export default {
     Header,
     CardsContainer
   },
-  // data() {
-  //   return {
-  //     store
-  //   }
-  // },
+
+  data() {
+    return {
+      store
+    }
+  },
+
+  methods:{
+    getApi(){
+      axios.get(store.apiUrl)
+        .then( res =>{
+          store.cardList = res.data.data;
+          console.log(store.cardList);
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }
+  }
 }
 
 </script>

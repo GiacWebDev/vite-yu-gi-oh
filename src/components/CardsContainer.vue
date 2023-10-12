@@ -1,5 +1,5 @@
 <script>
-import { store } from '../Data/store';
+import { store } from '../Data/store'
 import CharacterCard from './partials/CharacterCard.vue';
 
 export default {
@@ -24,7 +24,13 @@ export default {
     <div class="container">
       <div class="row">
 
-        <CharacterCard />
+        <CharacterCard 
+        v-for="card in store.cardList"
+        :key="card.id"
+        :cardImage="card.card_images[0].image_url_small"
+        :cardName="card.name"
+        :cardArchetype="card.archetype"
+        />
 
         
       </div>

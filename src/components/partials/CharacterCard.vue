@@ -1,11 +1,12 @@
 <script>
+
 export default {
   name: 'CharacterCard',
   props: {
     cardImage: String,
-    cardTitle: String,
-    cardTipologia: String
-  }
+    cardName: String,
+    cardArchetype: String
+  },
 }
 </script>
 
@@ -14,9 +15,9 @@ export default {
 
 <div class="col-3">
   <div class="_card debug">
-    <img :src="cardImage" :alt="cardTitle">
-    <h3>cardTitle</h3>
-    <p>cardTipologia</p>
+    <img :src="cardImage" :alt="cardName">
+    <h3>{{ cardName }}</h3>
+    <p>{{ cardArchetype }}</p>
   </div>
 </div>
 
@@ -28,6 +29,7 @@ export default {
 
 ._card {
   text-align: center;
+  height: 200px;
 }
 
 </style>
