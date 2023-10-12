@@ -1,6 +1,12 @@
 <script>
+
+import CharacterCard from './partials/CharacterCard.vue';
+
 export default {
-  name: 'CardsContainer'
+  name: 'CardsContainer',
+  components: {
+    CharacterCard
+  }
 }
 </script>
 
@@ -8,14 +14,15 @@ export default {
 
 <template>
 
-  <div class="container my-3 debug">
-    <div class="row">
-      <div class="card">
-        questa è una card
+  <main>
+  <div class="container">
+      <div class="row">
 
+        <CharacterCard />
+        
       </div>
     </div>
-  </div>
+  </main>
 
 </template>
 
@@ -23,5 +30,13 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/SCSS/main.scss' as *;
+
+main {
+  padding-top: 50px;
+}
+.container {
+  background-color: white;
+}
+
 
 </style>
