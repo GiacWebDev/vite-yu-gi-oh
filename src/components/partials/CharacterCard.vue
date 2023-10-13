@@ -13,8 +13,8 @@ export default {
 
 <template>
 
-<div class="col-3">
-  <div class="_card debug">
+<div class="col-2">
+  <div class="_card">
     <img :src="cardImage" :alt="cardName">
     <h3>{{ cardName }}</h3>
     <p>{{ cardArchetype }}</p>
@@ -27,9 +27,24 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/SCSS/main.scss' as *;
 
+
 ._card {
   text-align: center;
-  height: 200px;
+  background-color: #D48F38;
+  height: 420px;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+  }
+  h3 {
+    font-size: 17px;
+    padding: 10px 5px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
 }
+
+
 
 </style>

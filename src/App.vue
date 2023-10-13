@@ -10,7 +10,7 @@ export default {
   name: 'App',
   components: {
     Header,
-    CardsContainer
+    CardsContainer,
   },
 
   data() {
@@ -29,7 +29,8 @@ export default {
         .catch(err => {
           console.log(err);
         })
-    }
+    },
+
   },
   
   mounted(){

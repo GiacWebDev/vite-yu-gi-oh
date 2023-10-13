@@ -22,8 +22,14 @@ export default {
 
   <main>
     <div class="container">
-      <div class="row">
 
+      <div class="row ">
+        <div class="col">
+          <p>Cards found: number</p>
+        </div>
+      </div>
+
+      <div class="row">
         <CharacterCard 
         v-for="card in store.cardList"
         :key="card.id"
@@ -31,10 +37,8 @@ export default {
         :cardName="card.name"
         :cardArchetype="card.archetype"
         />
-
-        
       </div>
-    </div>
+    </div>   
   </main>
 
 </template>
@@ -43,5 +47,13 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/SCSS/main.scss' as *;
+
+.col {
+  background-color: $secondary-color;
+}
+
+p {
+  color: white;
+}
 
 </style>
