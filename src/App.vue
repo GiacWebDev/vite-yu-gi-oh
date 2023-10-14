@@ -3,8 +3,6 @@ import { store } from './Data/store';
 import axios from 'axios';
 import CardsContainer from './components/CardsContainer.vue';
 import Header from './components/Header.vue';
-// import { store } from 'vue'
-// import axios from 'axios';
 
 export default {
   name: 'App',

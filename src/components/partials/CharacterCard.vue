@@ -27,12 +27,12 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/SCSS/main.scss' as *;
 
-
 ._card {
   text-align: center;
   background-color: #D48F38;
   height: 420px;
   margin-bottom: 20px;
+  width: 100%;
   img {
     width: 100%;
   }
