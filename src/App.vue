@@ -3,12 +3,14 @@ import { store } from './Data/store';
 import axios from 'axios';
 import CardsContainer from './components/CardsContainer.vue';
 import Header from './components/Header.vue';
+import FilterList from './components/partials/FilterList.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
     CardsContainer,
+    FilterList
   },
 
   data() {
@@ -19,7 +21,11 @@ export default {
 
   methods:{
     getApi(){
-      axios.get(store.apiUrl)
+      axios.get(store.apiUrl, {
+        params: {
+          archetype: store.archetypeSelected,
+        }
+      })
         .then( res =>{
           store.cardList = res.data.data;
           console.log(store.cardList);
@@ -29,6 +35,13 @@ export default {
         })
     },
 
+    searchArchetype() {
+        console.log(this.store.archetypeSelected);
+        // console.log(this.archetype.getApiArchetypes());
+        // this.archetype.getApiArchetypes();
+        console.log(this.getApi());
+        this.getApi()
+        }
   },
   
   mounted(){
@@ -42,6 +55,7 @@ export default {
 <template>
 
   <Header />
+  <filterList @search-Filter="searchArchetype()"/>
   <CardsContainer />
   
 </template>

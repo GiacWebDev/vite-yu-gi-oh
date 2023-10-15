@@ -2,6 +2,8 @@
 import { store } from '../Data/store'
 import CharacterCard from './partials/CharacterCard.vue';
 import FilterList from './partials/FilterList.vue';
+import { archetype } from '../Data/archetype';
+import App from '../App.vue';
 
 export default {
   name: 'CardsContainer',
@@ -11,18 +13,18 @@ export default {
   },
   data() {
     return {
-      store
+      store,
+      archetype,
+      App
     }
   },
   methods: {
-        searchArcherype() {
-            console.log(this.store.archetypeSelected);
-            this.store.getApiArchetypes();
-        }
+        
     },
-  // created() {
-  //       store.getApiArchetypes();
-  // },
+
+  created() {
+        // store.getApi();
+  },
 }
 </script>
 
@@ -34,7 +36,7 @@ export default {
   <main>
     <div class="container">
 
-      <filterList @search-Filter="searchArcherype"/>
+      <!-- <filterList @search-Filter="searchArchetype"/> -->
 
       <div class="row ">
         <div class="col">
