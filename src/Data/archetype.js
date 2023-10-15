@@ -5,7 +5,7 @@ export const archetype = reactive({
   base_url: "https://db.ygoprodeck.com/api/v7/archetypes.php",
   listsArchetype: null,
 
-  fetchData() {
+  getApiArchetypes() {
     axios
       .get(this.base_url)
 

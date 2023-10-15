@@ -1,14 +1,14 @@
 <script>
 import { store } from '../../Data/store';
 import { archetype } from '../../Data/archetype';
-import selectArchetype from '../components/selectArchetype.vue';
+import SelectArchetype from './SelectArchetype.vue';
 
 export default {
     name: 'filterList',
     emits: ['searchFilter'],
 
     components: {
-        selectArchetype,
+        SelectArchetype,
     },
 
     data() {
@@ -19,8 +19,8 @@ export default {
     },
 
     created() {
-        store.fetchData();
-        archetype.fetchData();
+        // store.getApiArchetypes();
+        archetype.getApiArchetypes();
     }
 
 }

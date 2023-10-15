@@ -17,12 +17,12 @@ export default {
   methods: {
         searchArcherype() {
             console.log(this.store.archetypeSelected);
-            this.store.fetchData();
+            this.store.getApiArchetypes();
         }
     },
-    created() {
-        store.fetchData();
-    },
+  // created() {
+  //       store.getApiArchetypes();
+  // },
 }
 </script>
 
@@ -34,13 +34,7 @@ export default {
   <main>
     <div class="container">
 
-      <select class="form-select mb-4" aria-label="Select archeotype">
-        <option value="Alien">Alien</option>
-        <option value="Noble Knight">Noble Knight</option>
-        <option value="Sinful Spoils">Sinful Spoils</option>
-        <option value="Melodious">Melodious</option>
-        <option value="Archfiend">Archfiend</option>
-      </select>
+      <filterList @search-Filter="searchArcherype"/>
 
       <div class="row ">
         <div class="col">
@@ -49,7 +43,6 @@ export default {
       </div>
 
       <div class="row">
-        <filterList @search-Filter="searchArcherype" />
         <CharacterCard 
         v-for="card in store.cardList"
         :key="card.id"
